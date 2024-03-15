@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Problema 4</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Monaco, sans-serif;
+            background-color: #FFC0CB; 
+            color: blue;
+            margin: 0;
+            padding: 20px;
+        }
+
+
+        .input, .select, .textarea {
+            margin-bottom: 10px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .button {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Formular Electronic</h2>
+
+    <form action="https://helios.utcluj.ro/cosmin/WEB/responders/post_responder.php" target="_blank" method="POST">
+        <br>Nume:
+        <input type="text" id="nume" required>
+
+        <br>Prenume:
+        <input type="text" id="prenume" required>
+
+        <br>Sex:
+        <input type="radio" id="sexM" name="sex" value="Masculin" required>
+        Masculin
+        <input type="radio" id="sexF" name="sex" value="Feminin" required>
+        Feminin
+
+        <br>Data nașterii:
+        <input type="date" id="dataNasterii" required>
+
+        <br>Adresă de email:
+        <input type="text" id="email" required>
+
+        <br>Număr de telefon:
+        <input type="tel" id="telefon" required>
+
+        <br>Cunoștințe de programare:
+        <br><input type="checkbox" id="html" value="HTML" >
+        HTML
+        <input type="checkbox" id="css" value="CSS" >
+        CSS
+        <input type="checkbox" id="javascript" value="JavaScript" >
+        JavaScript
+<input type="checkbox" id="javascript" value="JavaScript" >
+        Niciuna
+
+        <br>Observații:
+        <br><textarea id="observatii" rows="4" required></textarea>
+
+        <br><button type="submit">Trimite</button>
+    </form>
+
+    <script>
+        function submitForm() {
+            const form = document.getElementById('myForm');
+        }
+
+    </script>
+
+</body>
+</body>
+</html>
+
