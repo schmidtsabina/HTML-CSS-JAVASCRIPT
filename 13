@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Problema 3</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Monaco, sans-serif;
+            background-color: #FFC0CB; 
+            color: blue;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .dateForm {
+            margin: 20px;
+        }
+
+        .acceptat {
+            margin-top: 20px;
+            color: blue;
+        }
+
+        .neacceptat {
+            margin-top: 20px;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Introducere date</h2>
+
+    <form id="dateForm">
+        Data de început
+        <input type="date" id="startDate" required>
+
+        Data de sfârșit:
+        <input type="date" id="endDate" required>
+
+        <button type="button" onclick="validateDates()">Validare</button>
+    </form>
+
+    <div id="acceptat" class="acceptat"></div>
+    <div id="neacceptat" class="neacceptat"></div>
+
+    <script>
+        function validateDates() {
+            const startDate = new Date(document.getElementById('startDate').value);
+            const endDate = new Date(document.getElementById('endDate').value);
+            const acceptatDiv = document.getElementById('acceptat');
+            const neacceptatDiv = document.getElementById('neacceptat');
+
+            const data3luni = new Date(startDate);
+            data3luni.setMonth(data3luni.getMonth() + 3);
+
+            if (endDate > data3luni) {
+                neacceptatDiv.innerHTML = '';
+                acceptatDiv.innerHTML = 'Intervalul este mai mare de 3 luni. Datele sunt valide.';
+            } else {
+                acceptatDiv.innerHTML = '';
+                neacceptatDiv.innerHTML = 'Intervalul trebuie să fie mai mare de 3 luni.';
+            }
+        }
+    </script>
+</body>
+</html>
