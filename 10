@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Problema 1</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Monaco, sans-serif;
+            background-color: #FFC0CB; 
+            color: white;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .myDiv {
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var myDiv = document.getElementById("myDiv");
+
+            setInterval(function() {
+                myDiv.style.backgroundColor = "blue";
+                
+                setTimeout(function() {
+                    myDiv.style.backgroundColor = "red";
+                }, 100); 
+            }, 200); 
+        });
+    </script>
+</head>
+
+<body>
+    <div id="myDiv">div</div>
+</body>
+</html>
