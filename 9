@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Problema 1</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Monaco, sans-serif;
+            background-color: #FFC0CB; 
+            color: white;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .myDiv {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+
+        .myDiv:hover {
+            background-color: blue;
+        }
+    </style>
+    <script>
+        function f1() {
+            var myDiv = document.getElementById("myDiv");
+
+            myDiv.addEventListener("mouseover", function() {
+                myDiv.style.backgroundColor = "blue";
+            });
+
+            myDiv.addEventListener("mouseout", function() {
+                myDiv.style.backgroundColor = "red";
+            });
+        }
+
+        document.addEventListener("DOMContentLoaded", f1);
+    </script>
+</head>
+
+<body>
+    <div id="myDiv">div</div>
+</body>
+</html>
