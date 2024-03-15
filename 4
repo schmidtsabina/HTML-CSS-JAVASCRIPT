@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Problema 2</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .culoripredefinite {
+            width: 200px;
+            height: 100px;
+            border: 2px solid pink;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        .culorirandom {
+            width: 200px;
+            height: 100px;
+            border: 2px solid pink;
+            margin: 10px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="culoripredefinite">
+    </div>
+
+    <div id="culorirandom">
+    </div>
+
+    <script>
+        var culoripredefiniteDiv = document.getElementById('culoripredefinite');
+        var culorirandomDiv = document.getElementById('culorirandom');
+
+        for (var i = 0; i < 10; i++) {
+            culoripredefiniteDiv.innerHTML += '<div class="culoripredefinite" style="background-color: #FFC0CB;">Culoare predefinita</div>';
+        }
+
+        for (var i = 0; i < 10; i++) {
+            var Culoarerandom = '#' + Math.floor(Math.random() * 16777215).toString(16);
+            culorirandomDiv.innerHTML += '<div class="culorirandom" style="background-color: ' + Culoarerandom + ';">Culoare random</div>';
+        }
+    </script>
+</body>
+</html>
