@@ -1,0 +1,209 @@
+
+
+<html>
+<head>
+<title>Laborator 8</title>
+<style>
+.container1{
+
+height:25%;
+border:1px solid red;
+padding:10px;
+display: flex;
+        align-items: center;
+        justify-content: center;
+
+}
+.container1 img {
+align-items:right;
+      max-width: 100px;
+      max-height: 100px;
+    }
+
+.container2{
+
+height:50%;
+border:1px solid blue;
+padding:10px;
+display: flex;
+        align-items: center;
+        justify-content: center;
+}
+
+.meniusecundar {
+      flex: 0 0 75%;
+      align-self: flex-start;
+border:2px solid blue;
+   
+    }
+
+ .meniusecundar a {
+      
+      margin: 10px;
+      padding: 10px;
+      border: 1px solid pink;
+      display: inline-block;
+      text-align: center;
+    }
+ 
+
+.meniuprincipal {
+      flex: 0 0 25%;
+      display: flex;
+      border:2px solid blue;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: flex-start;
+      
+      
+    }
+
+    .meniuprincipal a {         
+      margin: 10px;
+      padding: 10px;
+      border: 1px solid pink;
+      display: inline-block;
+      text-align: right;
+      width: 120px;
+    }
+.zonacentrala a {
+  padding: 20px;
+  align-self: flex-end;
+}
+
+
+.container2 img{
+  margin: 10px;
+  max-width: 100px; 
+  max-height: 100px;
+}
+
+.container3{
+height:25%;
+border:1px solid pink;
+padding:10px;
+display: flex;
+        align-items: center;
+        flex-direction: column;
+      justify-content: flex-end;
+}
+.container3 img{
+max-width: 20px; 
+  max-height: 20px;
+}
+
+</style>
+</head>
+<body>
+<div>
+<div class="container1">
+<img src="C:\Users\schmi\Desktop\lab8\logo.jpg.jpg">
+<h1><br>Laborator 8</h1></br>
+</div>
+
+<div class="container2">
+
+    <div class="meniusecundar">
+      <a href="https://stardewvalleywiki.com/Stardew_Valley_Wiki" target="_blank">Stardew Valley</a>
+      <a href="https://minecraft.wiki/" target="_blank">Minecraft</a>
+      <a href="https://altex.ro/lego-star-wars-millennium-falcon-75192-16-ani-7541-piese/cpd/JUCLEGO75192/?cq_src=google_ads&cq_cmp=17823253342&cq_con=&cq_term=&cq_med=pla&cq_plac=&cq_net=x&cq_pos=&cq_plt=gp&gad_source=1&gclid=CjwKCAiApaarBhB7EiwAYiMwqvDIMtEFRsjZRGGlzKT_p6U_RyFcIcmhdCjrSk1aakQX2e1gfL53RhoCGWAQAvD_BwE" target="_blank">Millenium Falcon</a>
+     
+   </div>
+<div class="zonacentrala">
+<img src="C:\Users\schmi\Downloads\summer crochet top ideas ☀️.jpg" alt="Image 1">
+
+    <img src="C:\Users\schmi\Desktop\lab8\img2.jpg" alt="Image 2">
+
+    <img src="C:\Users\schmi\Desktop\lab8\img3.jpg" alt="Image 3">
+
+</div>
+<div class="meniuprincipal">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+      <a href="#">Link 4</a>
+      <a href="#">Link 5</a>
+    </div>
+
+</div>
+<div class="container3">
+
+    <div>
+      <img src="C:\Users\schmi\Desktop\lab8\telefon.png" alt="Telefon:"> Phone: 1234567890
+    </div>
+    <div>
+      <img src="C:\Users\schmi\Desktop\lab8\gmail.png" alt="Gmail:"> Email: schmidtsabina.ss@gmail.com
+    </div>
+    <div>&copy; Schmidt Sabina</div>
+  </div>
+</div>
+</body>
+</html>
+================================================================================================================
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Exercitiu 1</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+ body {
+        font-family: Monaco, sans-serif;
+        background-color: #FFC0CB; 
+        color: blue;
+        margin: 0;
+        padding: 20px;
+      }
+</style>
+
+
+<script>
+
+  function f1() {
+    var sir = [3, 8, 9, 5, 4, 0, 1, 2, 7];
+
+    document.getElementById("displayer").innerHTML += "Sir:";
+    document.getElementById("displayer").innerHTML += sir.join(', ') + "<br>";
+
+   
+    var ordinecresc= sir.slice().sort(function(a, b) {
+      return a - b;
+    });
+    var ordinedesc = sir.slice().sort(function(a, b) {
+      return b - a;
+    });
+
+    document.getElementById("displayer").innerHTML += "Ordonare crescatoare:";
+    document.getElementById("displayer").innerHTML += ordinecresc.join(', ') + "<br>";
+
+    document.getElementById("displayer").innerHTML += "Ordonarea descrescatoare:";
+    document.getElementById("displayer").innerHTML += ordinedesc.join(', ') + "<br>";
+
+
+    var nrimpare = sir.filter(function(n) {
+      return n % 2 !== 0;
+    });
+
+    document.getElementById("displayer").innerHTML += "Sirul de mai sus fara valorile pare:";
+    document.getElementById("displayer").innerHTML += nrimpare.join(', ') + "<br>";
+
+    var valintroduse = [24,76,98];
+    sir = sir.concat(valintroduse);
+
+    document.getElementById("displayer").innerHTML += "Sirul cu valorile adaugate:";
+    document.getElementById("displayer").innerHTML += sir.join(', ') + "<br>";
+  }
+</script>
+
+</head>
+
+<body onLoad="f1()">
+
+<div id="displayer">
+</div>
+
+
+</body>
+</html>
