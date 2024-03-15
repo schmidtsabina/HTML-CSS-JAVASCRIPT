@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>lab11</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Monaco, sans-serif;
+            background-color: #FFC0CB; 
+            color: blue;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .myDiv {
+            position: absolute;
+            border: 1px solid blue;
+            padding: 5px;
+            background-color: white;
+        } 
+.myDiv:hover {
+            background-color: yellow;
+        }
+    </style>
+    <script>
+        var counter = 1;
+
+        function f1(e) {
+            var newDiv = document.createElement("div");
+            newDiv.className = "myDiv";
+            newDiv.style.left = e.pageX + "px";
+            newDiv.style.top = e.pageY + "px";
+            newDiv.innerHTML = counter;
+            counter++;
+newDiv.addEventListener("mouseover", function() {
+                newDiv.style.backgroundColor = "yellow";
+            });
+
+            newDiv.addEventListener("mouseout", function() {
+                newDiv.style.backgroundColor = "white";
+            });
+
+            document.body.appendChild(newDiv);
+
+            document.body.appendChild(newDiv);
+        }
+
+        document.addEventListener("click", f1);
+    </script>
+</head>
+
+<body>
+</body>
+</html>
