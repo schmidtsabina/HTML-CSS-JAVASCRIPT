@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Problema 4</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Monaco, sans-serif;
+            background-color: #FFC0CB; 
+            color: blue;
+            margin: 0;
+            padding: 20px;
+        }
+.val1 {
+            width: 50px;
+            text-align: center;
+        }
+.val2 {
+            width: 50px;
+            text-align: center;
+        }
+
+        .cerc {
+            width: 50px;
+            height: 50px;
+            background-color: blue;
+            border-radius: 50%;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Cerc</h2>
+
+    Valoare 1:
+    <input type="number" id="val1" min="100" max="400" value="100" oninput="Cerc()">
+
+    Valoare 2:
+    <input type="number" id="val2" min="100" max="400" value="100" oninput="Cerc()">
+
+    <button onclick="pozitioneazaCerc()">Pozitioneaza Cerc</button>
+
+    <div id="cerc"></div>
+
+    <script>
+        function Cerc() {
+            const val1 = parseInt(document.getElementById('val1').value) ;
+            const val2 = parseInt(document.getElementById('val2').value) ;
+            const cerc = document.getElementById('cerc');
+
+            cerc.style.left = `${val1}px`;
+            cerc.style.top = `${val2}px`;
+        }
+
+        function pozitioneazaCerc() {
+            Cerc();
+        }
+    </script>
+
+</body>
+</html>
+
