@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Problema 4</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.litere{
+width:200px;
+height:100px;
+border: 2px solid pink;
+margin:10px;
+padding: 10px;
+}
+.cifre{
+width:200px;
+height:100px;
+border: 2px solid pink;
+margin:10px;
+padding: 10px;
+}
+.inlocuire{
+width:200px;
+height:100px;
+border: 2px solid pink;
+margin:10px;
+padding: 10px;
+}
+</style>
+</head>
+
+
+<body>
+    <div id="text">
+        1ala2bala3porto4cala5
+    </div>
+    <div id="litere">
+    </div>
+    <div id="cifre">
+    </div>
+    <div id="inlocuire">
+    </div>
+    <script>
+        var textcontainer = document.getElementById('text');
+        var litereDiv = document.getElementById("litere");
+        var cifreDiv = document.getElementById("cifre");
+        var inlocuireDiv = document.getElementById("inlocuire");
+        var text = textcontainer.textContent;
+
+        var litere = '';
+        var cifre = '';
+        
+        for (var i = 0; i < text.length; i++) {
+            if (/[a-zA-Z]/.test(text[i])) {
+                litere += text[i];
+            } else if (/[0-9]/.test(text[i])) {
+                cifre += text[i];
+            }
+        }
+
+        litereDiv.innerHTML = litere;
+        cifreDiv.innerHTML = cifre;
+
+        var textinlocuit = text.replace(/\d/g, '*');
+        inlocuireDiv.innerHTML = textinlocuit;
+    </script>
+</body>
+</html>
