@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Exercitiu 2</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+ body {
+        font-family: Monaco, sans-serif;
+        background-color: #FFC0CB; 
+        color: blue;
+        margin: 0;
+        padding: 20px;
+      }
+</style>
+
+<script>
+function f1() {
+    var produse = {
+      "Produs1": 1200,
+      "Produs2": 2500,
+      "Produs3": 50,
+      "Produs4": 80
+    };
+
+    document.getElementById("displayer").innerHTML = "Pret produs:";
+
+    for (var produs in produse) {
+      document.getElementById("displayer").innerHTML += "<p>Produs: " + produs + ", Pret: " + produse[produs] + "</p>";
+    }
+
+    document.getElementById("displayer").innerHTML += "Valori prin iterarea cheilor:";
+    Object.keys(produse).forEach(function(n) {
+        document.getElementById("displayer").innerHTML += "<p>Pret pentru produsul '" + n + "': " + produse[n] + "</p>";
+    });
+
+    var produseSortate = {};
+    Object.keys(produse).sort(function(a, b) {
+        return produse[a] - produse[b];
+    }).forEach(function(n) {
+        produseSortate[n] = produse[n];
+    });
+
+   document.getElementById("displayer").innerHTML += "Produse ordonate dupa pret:";
+    for (var produs in produseSortate) {
+        document.getElementById("displayer").innerHTML += "<p>Produs: " + produs + ", Pret: " + produseSortate[produs] + "</p>";
+    }
+}
+</script>
+
+</head>
+
+<body onLoad="f1()">
+
+<div id="displayer">
+</div>
+
+</body>
+</html>
