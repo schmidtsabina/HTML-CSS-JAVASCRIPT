@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Problema 2</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .culoripredefinite {
+            width: 200px;
+            height: 100px;
+            border: 2px solid pink;
+            margin: 10px;
+            padding: 10px;
+            position: relative; 
+        }
+
+        .cod {
+            position: absolute;
+            top: 0;
+            left: 50%;
+
+            font-size: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="culoripredefinite">
+    </div>
+
+    <div id="culorirandom">
+    </div>
+
+    <script>
+var culoripredefinite=['#FFC0CB', '#98FB98', '#ADD8E6', '#FFD700', '#FF6347', '#8A2BE2', '#7CFC00', '#FF4500', '#00BFFF', '#FF69B4'];
+        function f1(event) {
+            var div = event.currentTarget;
+            var color = window.getComputedStyle(div).backgroundColor;
+            var colorCode = document.createElement('div');
+            colorCode.textContent = color;
+            colorCode.className = 'cod';
+            div.appendChild(colorCode);
+        }
+
+        var culoripredefiniteDiv = document.getElementById('culoripredefinite');
+      
+
+        for (var i = 0; i < 10; i++) {
+            var div = document.createElement('div');
+            div.className = 'culoripredefinite';
+            div.style.backgroundColor = culoripredefinite[i];
+            div.textContent = 'DIV';
+            div.addEventListener('mouseover', f1);
+            culoripredefiniteDiv.appendChild(div);
+        }
+    </script>
+</body>
+</html>
