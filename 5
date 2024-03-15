@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Problema 3</title>
+  <style>
+    body {
+      font-family: Monaco, sans-serif;
+      background-color: #FFC0CB;
+      color: blue;
+      margin: 0;
+      padding: 20px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 50px);
+      grid-gap: 2px;
+    }
+    .cell {
+      width: 50px;
+      height: 50px;
+      border: 2px solid pink;
+    }
+    .cell.zero {
+      background-color: rgb(254, 52, 126);
+    }
+    .cell.unu {
+      background-color: rgb(50, 82, 123);
+    }
+  </style>
+</head>
+<body>
+
+<div class="grid" id="gridmatrix"></div>
+
+<script>
+const matrice = [
+  [1, 1, 0, 1],
+  [0, 1, 0, 0],
+  [0, 1, 1, 0]
+];
+
+function createGrid() {
+  const gridContainer = document.getElementById('gridmatrix');
+  let gridHTML = '';
+
+  for (let i = 0; i < matrice.length; i++) {
+    for (let j = 0; j < matrice[i].length; j++) {
+      if (matrice[i][j] === 0) {
+        gridHTML += '<div class="cell zero"></div>';
+      } else if (matrice[i][j] === 1) {
+        gridHTML += '<div class="cell unu"></div>';
+      }
+    }
+  }
+
+  gridContainer.innerHTML = gridHTML;
+}
+
+createGrid();
+</script>
+</body>
+</html>
+
+
+</body>
+</html>
