@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Problema 6</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+        font-family: Monaco, sans-serif;
+        background-color: #FFC0CB; 
+        color: blue;
+        margin: 0;
+        padding: 20px;
+      }
+    </style>
+</head>
+
+<body onload="start()">
+<div id="displayer"></div>
+
+<script>
+function start() {
+  const today = new Date();
+  let h = today.getHours();
+  let m = today.getMinutes();
+  let s = today.getSeconds();
+  m = check(m);
+  s = check(s);
+  document.getElementById('displayer').innerHTML =  h + ":" + m + ":" + s;
+  setTimeout(start, 1000);//ruleaza start o data la 1000ms 
+}
+
+function check(i) {
+  if (i < 10) {i = "0" + i};
+  return i;
+}
+</script>
+</body>
+</html>
