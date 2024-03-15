@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>lab 12</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Monaco, sans-serif;
+            background-color: #FFC0CB; 
+            color: blue;
+            margin: 0;
+            padding: 20px;
+        }
+        .myDiv { 
+            border: 1px solid blue;
+            padding: 5px;
+height:30px;
+width:30px;
+        }
+    </style>
+    <script>
+        function f1() {
+            var elemente = document.getElementById("input1").value;
+            var r = document.getElementById("range1").value;
+            var g = document.getElementById("range2").value;
+            var b = document.getElementById("range3").value;
+
+            for (var i = 0; i < elemente; i++) {
+                var newDiv = document.createElement("div");
+                newDiv.className = "myDiv";
+                newDiv.style.backgroundColor = "rgb(" + r + "," + g + "," + b + ")";
+                document.body.appendChild(newDiv);
+            }
+          
+
+
+        }
+    </script>
+</head>
+
+<body>
+     <form onsubmit="event.preventDefault(); f1();">
+        R <input type="range" name="range1" id="range1" min="0" max="255">
+        <br>G <input type="range" name="range2" id="range2" min="0" max="255">
+        <br>B <input type="range" name="range3" id="range3" min="0" max="255">
+        <br><textarea id="input1" rows="1" cols="16"></textarea>
+        <br><input type="submit" value="OK">
+    </form>
+</body>
+</html>
